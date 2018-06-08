@@ -1,0 +1,240 @@
+body{
+    width: 99%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 30% 3% 10% 40% 10% 4% 3%;
+    grid-template-areas: "banner banner banner banner"
+                        "instructions instruction . ."
+                        ". text text text"
+                        ". . button ."
+                        ". . . footer";
+    font-family: 'Crimson Text', serif;
+    background-image: url(https://images.pexels.com/photos/174658/pexels-photo-174658.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#banner{
+    grid-area: banner;
+    grid-column: 2/5;
+    grid-row: 1/2;
+    padding: 5px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 65px 5px 65px;
+}
+
+#logo{
+    float: right;
+    margin-top: -20px;
+    margin-right: -60px;
+}
+
+#slogan{
+    font-size: 25px;
+    font-weight: normal;
+    text-align: right;
+    margin-right: 170px;
+}
+
+#advertisement{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 728px;
+    height: 90px;
+    margin: 10px;
+}
+
+#instructions{
+    grid-area: instructions;
+    grid-column: 2/4;
+    grid-row: 3/4;
+    padding: 2px;
+    text-align: center;
+}
+
+#text{
+    grid-area: text;
+    grid-column: 3/5;
+    grid-row: 4/5;
+    padding: 2px;
+    margin-right: 90px;
+    margin-left: -80px;
+    margin-top: -30px;
+    text-align: center;
+}
+
+.text_instructions{
+    color: black;
+    opacity: 1;
+    line-height: 2;
+}
+
+#start_btn{
+    grid-area: button;
+    grid-column: 3/5;
+    grid-row: 5/6;
+    text-align: center;
+}
+
+#button{
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px grey;
+}
+
+#button:hover {
+    background-color: #B38D97
+}
+
+#button:active {
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
+}
+
+input{
+    padding: 18px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    border-radius: 44%;
+    border: 2px solid #D5ACA9;
+}
+
+#dashboard{
+    border-top: 2px solid #B38D97;
+    background-color: #fffff4;
+    grid-column: 2/5;
+    grid-row: 6/7;
+    padding: 5px;
+    margin: 25px 0 10px 5px;
+    margin-left: 22%;
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    text-align: center;
+}
+
+#survey{
+    grid-column: 1/2;
+    display: grid;
+    grid-template-rows: 160px 50px;
+    padding: 10px;
+}
+
+#report{
+    grid-column: 2/3;
+    display: grid;
+    grid-template-rows: 160px 50px;
+}
+
+#elearning{
+    grid-column: 3/4;
+    display: grid;
+    grid-template-rows: 160px 50px;
+}
+
+.donut{
+    width: 150px;
+    grid-row: 1/2;
+    margin-left: 100px;
+}
+
+.dash_btn{
+    grid-row: 2/3;
+    width: 40%;
+    margin-left: 105px; 
+}
+
+footer{
+    grid-area: footer;
+    grid-column: 1/5;
+    grid-row: 7/8;
+    text-align: right;
+    padding: 2px;
+    position: bottom;
+}
+
+@media only screen and (max-device-width: 1450px){
+    body{
+        background-image: url(https://images.pexels.com/photos/137109/pexels-photo-137109.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .position{
+        grid-column: 1/5!important;
+        margin: 5px 20px 5px 10px;
+    }
+
+    #advertisement{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #banner{
+        font-size: 30px;
+        padding: 2px;
+    }
+
+    #slogan{
+        font-size: 18px;
+        width: 205px;
+    }
+
+    #logo{
+        margin-top: -15px;
+        margin-right: -45px;
+        width: 100px;
+    }
+
+    #text{
+        line-height: 1.5;
+        margin: 5px 20px 5px 10px;
+        background-color: #ffe0e9;
+    }
+
+    #dashboard{
+        border-top: 2px solid #B38D97;
+        background-color: #fffff4;
+        grid-column: 1/4;
+        grid-row: 6/7;
+        margin: 10px;
+    }
+  }
+
+@media only screen and (max-device-width: 1000px){
+    .donut{
+        margin: 4px;
+    }
+
+    .dash_btn{
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-device-width: 470px){
+    #text{
+        font-size: 12px;
+        background-color: transparent;
+    }
+
+    #logo{
+        margin-top: -15px;
+        margin-right: -75px;
+        width: 80px;
+    }
+
+    .donut{
+        width: 90px;
+    }
+
+    .dash_btn{
+        width: 65px;
+        padding: 10px;
+        text-align: right;
+        border-radius: 50%;
+        font-size: 14px;
+    }
+}
